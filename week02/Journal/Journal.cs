@@ -1,6 +1,11 @@
 public class Journal
 {
-    private List<Entry> _entries;
+    public List<Entry> _entries;
+
+    public Journal()
+    {
+        _entries = new List<Entry>();
+    }
 
     public void AddEntry(Entry entry)
     {
@@ -12,7 +17,6 @@ public class Journal
         foreach (var entry in _entries)
         {
             entry.Display();
-            Console.WriteLine();
         }
     }
 
@@ -20,7 +24,7 @@ public class Journal
     {
         using (StreamWriter writer = new StreamWriter(filename))
         {
-            foreach (var entry in _entries)
+            foreach (Entry entry in _entries)
             {
                 writer.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
             }
