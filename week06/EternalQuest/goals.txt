@@ -1,0 +1,4 @@
+6
+1
+SimpleGoal|Hii|2|1
+EternalGoal|Helou|4
